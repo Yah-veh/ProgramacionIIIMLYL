@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ordenar_un_arreglo_mediante_generico
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] entero = { 1, 2, 3, 4, 5, 6 };
+            double[] reales = { -3.3, -2.2, -1.1, 0, 1.1, 2.2, 3.3 };
+            string[] cadenas = { "Alberto", "Bartolina", "Carlos", "Daniel", "Edgar" };
+            Console.WriteLine("Arreglo de Enteros: ");
+            MuestraArreglo(entero);
+            Console.WriteLine("Arreglo de Reales: ");
+            MuestraArreglo(reales);
+            Console.WriteLine("Arreglo de Cadenas: ");
+            MuestraArreglo(cadenas);
+            Console.ReadKey();
+        }
+        private static void MuestraArreglo<T>(T[] arreglo)
+        {
+            Array.Sort(arreglo);
+            Array.Reverse(arreglo);
+            foreach (T elemento in arreglo)
+                Console.Write(elemento + " ");
+            Console.WriteLine("\n");
+        }
+    }
+}

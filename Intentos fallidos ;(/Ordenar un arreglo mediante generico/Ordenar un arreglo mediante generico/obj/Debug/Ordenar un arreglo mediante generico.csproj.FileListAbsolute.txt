@@ -1,0 +1,6 @@
+D:\Rep Git\ProgramacionIIIMLYL\Tarea 2 Genericos\Ordenar un arreglo mediante generico\Ordenar un arreglo mediante generico\obj\Debug\Ordenar un arreglo mediante generico.csprojAssemblyReference.cache
+D:\Rep Git\ProgramacionIIIMLYL\Tarea 2 Genericos\Ordenar un arreglo mediante generico\Ordenar un arreglo mediante generico\bin\Debug\Ordenar un arreglo mediante generico.exe.config
+D:\Rep Git\ProgramacionIIIMLYL\Tarea 2 Genericos\Ordenar un arreglo mediante generico\Ordenar un arreglo mediante generico\bin\Debug\Ordenar un arreglo mediante generico.exe
+D:\Rep Git\ProgramacionIIIMLYL\Tarea 2 Genericos\Ordenar un arreglo mediante generico\Ordenar un arreglo mediante generico\bin\Debug\Ordenar un arreglo mediante generico.pdb
+D:\Rep Git\ProgramacionIIIMLYL\Tarea 2 Genericos\Ordenar un arreglo mediante generico\Ordenar un arreglo mediante generico\obj\Debug\Ordenar un arreglo mediante generico.exe
+D:\Rep Git\ProgramacionIIIMLYL\Tarea 2 Genericos\Ordenar un arreglo mediante generico\Ordenar un arreglo mediante generico\obj\Debug\Ordenar un arreglo mediante generico.pdb
