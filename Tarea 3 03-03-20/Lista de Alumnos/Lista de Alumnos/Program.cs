@@ -16,9 +16,9 @@ namespace Lista_de_Alumnos
             while (opcion!=3)
             {
                 Console.WriteLine("1.- Insertar Alumno");
-                Console.WriteLine("2.- Mostrar Alumno");
+                Console.WriteLine("2.- Mostrar TODOS");
                 Console.WriteLine("3.- Mostrar Alumnas");
-                Console.WriteLine("4.- Mostrar lista de alumnos ordenado");
+                Console.WriteLine("4.- INSENTAR TODOS");
                 Console.WriteLine("5.-  Salir");
                 Console.WriteLine("Introduzca Opcion: ");
                 opcion = int.Parse(Console.ReadLine());
@@ -30,6 +30,12 @@ namespace Lista_de_Alumnos
                     case 2:
                         Mostrar(listaalumnos);
                         break;
+                    case 3:
+                        MostrarAlumnas(listaalumnos);
+                        break;
+                    case 4:
+                        InsetarTodos(listaalumnos);
+                        break;
                     default:
                         break;
                 }
@@ -40,7 +46,7 @@ namespace Lista_de_Alumnos
             foreach(Alumno a in listaalumnos)
             {
                 if(a!=null)
-                Console.WriteLine("{0}{1}{2}{3}{4}", a.nombre, a.primerapellido, a.segundoapeliido, a.ci, a.edad);
+                Console.WriteLine("{0}{1}{2}{3}{4}{5}", a.nombre, a.primerapellido, a.segundoapeliido, a.ci, a.edad,a.sexo);
             }
         }
         static void Insetar(Alumno[] listaalumnos)
@@ -65,17 +71,41 @@ namespace Lista_de_Alumnos
         }
         static void InsetarTodos(Alumno[] listaalumnos)
         {
-            listaalumnos[0] = new Alumno("Antonio", "Arce", "Pacheco", "10390566",  21,"M");
-            listaalumnos[1] = new Alumno("Maycol", "Mancilla", "Lora", "10566366", 22, "M");
-            listaalumnos[3] = new Alumno("Camila", "Canaviri", "Mamani", "12398414", 19, "F");
-            listaalumnos[3] = new Alumno("Kassandra", "Cuellar", "Almendras", "7512719" , 21,"F");
-            listaalumnos[4] = new Alumno("Danna", "Colque", "Soliz", "65498512", 18,"F");
-            listaalumnos[5] = new Alumno("Jhoselin", "Choque", "Ajalla", "12931915", 19, "F");
-            listaalumnos[5] = new Alumno("Yerson", "Mallcu", "Lisarazu", "123456789",26, "M");
-            listaalumnos[5] = new Alumno("Manuel", "Quispe", "Calcina", "8565058",20, "M");
-
-
+            listaalumnos[0] = new Alumno("Antonio ", "Arce ", "Pacheco ", "10390566 ",  21 ," M ");
+            listaalumnos[1] = new Alumno("Maycol ", "Mancilla ", "Lora ", "10566366 ", 22, " M");
+            listaalumnos[3] = new Alumno("Camila ", "Canaviri ", "Mamani ", "12398414 ", 19, " F");
+            listaalumnos[4] = new Alumno("Kassandra ", "Cuellar ", "Almendras ", "7512719 " , 21," F");
+            listaalumnos[5] = new Alumno("Danna ", "Colque ", "Soliz ", "65498512 ", 18," F");
+            listaalumnos[6] = new Alumno("Jhoselin ", "Choque ", "Ajalla ", "12931915 ", 19, " F");
+            listaalumnos[7] = new Alumno("Yerson ", "Mallcu ", "Lisarazu ", "123456789 ",26, " M");
+        
+        }
+        static void MostrarAlumnas(Alumno[] listaalumnos)
+        {
+            foreach (Alumno a in listaalumnos)
+            {
+                if (a != null)
+                    if (a.sexo == "F")
+                        Console.WriteLine("{0} {1} {2} {3} {4}", a.nombre, a.primerapellido, a.segundoapeliido, a.ci, a.edad,a.sexo);
+            }
+            Console.ReadKey();
         }
 
+        static void mostrarordenados(Alumno[] listaalumnos)        
+        {
+
+            
+                
+            foreach (Alumno a in listaalumnos)
+            {
+                if (a != null)
+                {
+                    
+                    Console.WriteLine("{0} {1} {2} {3} {4}", a.nombre, a.primerapellido, a.segundoapeliido, a.ci, a.edad, a.sexo);
+
+                }
+            }
+            
+        }
     }
 }
