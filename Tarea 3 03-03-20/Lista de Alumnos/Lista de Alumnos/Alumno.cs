@@ -8,22 +8,24 @@ namespace Lista_de_Alumnos
 {
     class Alumno
     {
-        public Alumno(string nombre, string primerapellido, string segundoapeliido, string ci, int edad, string sexo)
+        public Alumno(string nombre, string primerapellido, string segundoapellido, string ci, string sexo, int edad)
         {
             this.nombre = nombre;
             this.primerapellido = primerapellido;
-            this.segundoapeliido = segundoapeliido;
+            this.segundoapellido = segundoapellido;
             this.ci = ci;
-            this.edad = edad;
             this.sexo = sexo;
+            this.edad = edad;
         }
 
-        public string nombre {set;get;}
-        public string primerapellido { set; get; }
-        public string segundoapeliido { set; get; }
-        public string ci { set; get; }
-        public int edad { set; get; }
-        public string sexo { set; get; }
+        public String nombre { get; set; }
+        public String primerapellido { get; set; }
+        public String segundoapellido { get; set; }
+        public String ci { get; set; }
+        public String sexo { get; set; }
+
+        public int edad { get; set; }
+
     }
-    
+
 }

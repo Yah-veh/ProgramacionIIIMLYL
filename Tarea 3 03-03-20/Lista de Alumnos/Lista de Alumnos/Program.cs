@@ -11,21 +11,25 @@ namespace Lista_de_Alumnos
         static void Main(string[] args)
         {
             Alumno[] listaalumnos = new Alumno[8];
-            InsetarTodos(listaalumnos);
+            InsertarTodos(listaalumnos);
             int opcion = 0;
-            while (opcion!=3)
+            while (opcion != 13)
             {
+                Console.Clear();
                 Console.WriteLine("1.- Insertar Alumno");
-                Console.WriteLine("2.- Mostrar TODOS");
+                Console.WriteLine("2.- Mostrar Alumnos");
                 Console.WriteLine("3.- Mostrar Alumnas");
-                Console.WriteLine("4.- INSENTAR TODOS");
-                Console.WriteLine("5.-  Salir");
-                Console.WriteLine("Introduzca Opcion: ");
+                Console.WriteLine("4.- Ordenar por Nombre");
+                Console.WriteLine("5.- Mayores de 20");
+                Console.WriteLine("6.- Sexo y Primer Apellido");
+                Console.WriteLine("Salir");
+                Console.Write("Introduzca opcion ");
                 opcion = int.Parse(Console.ReadLine());
+
                 switch (opcion)
                 {
                     case 1:
-                        Insetar(listaalumnos);
+                        Insertar(listaalumnos);
                         break;
                     case 2:
                         Mostrar(listaalumnos);
@@ -34,78 +38,208 @@ namespace Lista_de_Alumnos
                         MostrarAlumnas(listaalumnos);
                         break;
                     case 4:
-                        InsetarTodos(listaalumnos);
+                        OrdenarNombre(listaalumnos);
+                        break;
+                    case 5:
+                        Mayores20(listaalumnos);
+                        break;
+                    case 6:
+                        SexoPrimerApellido(listaalumnos);
+                        break;
+                    case 7:
+                        AgruparEdad(listaalumnos);
+                        break;
+                    case 8:
+                        CantidadEdad(listaalumnos);
+                        break;
+                    case 9:
+                        EdadPromedioSexo(listaalumnos);
+                        break;
+                    case 10:
+                        MayorSexoEdad(listaalumnos);
+                        break;
+                    case 11:
+                        TresMenores(listaalumnos);
+                        break;
+                    case 12:
+                        TresMenoresDespues(listaalumnos);
                         break;
                     default:
                         break;
                 }
             }
         }
-        static void Mostrar(Alumno[] listaalumnos)
+        static void Insertar(Alumno[] listaalumnos)
         {
-            foreach(Alumno a in listaalumnos)
-            {
-                if(a!=null)
-                Console.WriteLine("{0}{1}{2}{3}{4}{5}", a.nombre, a.primerapellido, a.segundoapeliido, a.ci, a.edad,a.sexo);
-            }
-        }
-        static void Insetar(Alumno[] listaalumnos)
-        {
-            Console.WriteLine("Introduzca el Numero del Alumno: ");
-            int nroalumno = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Introduzca el Nombre: ");
-            string Nombre = Console.ReadLine();
-            Console.WriteLine("Introduzca el Primer Apellido: ");
-            string PrimerApeliido = Console.ReadLine();
-            Console.WriteLine("Introduzca el Segundo Apellido: ");
-            string SegundoApellido = Console.ReadLine();
-            Console.WriteLine("Introduzca su Carnet de Identidad: ");
-            string CI = Console.ReadLine();
-            Console.WriteLine("Introduzca su Edad: ");
-            int Edad = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Introduzca Sexo: ");
-            string Sexo = Console.ReadLine();
-            Alumno a = new Alumno(Nombre, PrimerApeliido, SegundoApellido, CI, Edad,Sexo);
+
+            Console.Write("Introduzca el nro de alumno: ");
+            int nroalumno = int.Parse(Console.ReadLine()) - 1;
+            Console.Write("Introduzca el Nombre: ");
+            String Nombre = Console.ReadLine();
+            Console.Write("Introduzca el Primer Apellido: ");
+            String PrimerApellido = Console.ReadLine();
+            Console.Write("Introduzca el Segundo Apellido: ");
+            String SegundoApellido = Console.ReadLine();
+            Console.Write("Introduzca el Carnet de Identidad: ");
+            String CI = Console.ReadLine();
+            Console.Write("Introduzca el Sexo: (M/F) ");
+            String Sexo = Console.ReadLine();
+
+            Console.Write("Introduzca la Edad: ");
+            int Edad = int.Parse(Console.ReadLine());
+
+
+            Alumno a = new Alumno(Nombre, PrimerApellido, SegundoApellido, CI, Sexo, Edad);
             listaalumnos[nroalumno] = a;
 
         }
-        static void InsetarTodos(Alumno[] listaalumnos)
+        static void InsertarTodos(Alumno[] listaalumnos)
         {
-            listaalumnos[0] = new Alumno("Antonio ", "Arce ", "Pacheco ", "10390566 ",  21 ," M ");
-            listaalumnos[1] = new Alumno("Maycol ", "Mancilla ", "Lora ", "10566366 ", 22, " M");
-            listaalumnos[3] = new Alumno("Camila ", "Canaviri ", "Mamani ", "12398414 ", 19, " F");
-            listaalumnos[4] = new Alumno("Kassandra ", "Cuellar ", "Almendras ", "7512719 " , 21," F");
-            listaalumnos[5] = new Alumno("Danna ", "Colque ", "Soliz ", "65498512 ", 18," F");
-            listaalumnos[6] = new Alumno("Jhoselin ", "Choque ", "Ajalla ", "12931915 ", 19, " F");
-            listaalumnos[7] = new Alumno("Yerson ", "Mallcu ", "Lisarazu ", "123456789 ",26, " M");
-        
+            listaalumnos[0] = new Alumno("Antonio", "Arce", "Pacheco", "10390566", "M", 21);
+            listaalumnos[1] = new Alumno("Maycol", "Mancilla", "Lora", "10566366", "M", 22);
+            listaalumnos[2] = new Alumno("Camila", "Canaviri", "Mamani", "12398414", "F", 19);
+            listaalumnos[3] = new Alumno("Kassandra", "Cuellar", "Almendras", "7512719", "F", 21);
+            listaalumnos[4] = new Alumno("Danna", "Colque", "Soliz", "65498512", "F", 18);
+            listaalumnos[5] = new Alumno("Jhoselin", "Choque", "Ajalla", "12931915", "F", 19);
+            listaalumnos[6] = new Alumno("Yerson", "Mallcu", "Lisarazu", "123456789", "M", 26);
+            listaalumnos[7] = new Alumno("Manuel", "Quispe", "Calcina", "8565058", "M", 20);
+        }
+
+        static void Mostrar(Alumno[] listaalumnos)
+        {
+            
+
+            var todos = from l in listaalumnos
+                        select l;
+            foreach (Alumno a in todos)
+            {
+                
+                 Console.WriteLine("{0} {1} {2} {3} {4}", a.nombre, a.primerapellido, a.segundoapellido, a.ci, a.edad,a.sexo);
+            }
+            Console.ReadKey();
+
         }
         static void MostrarAlumnas(Alumno[] listaalumnos)
         {
-            foreach (Alumno a in listaalumnos)
+            var alumnas = from l in listaalumnos
+                        where l.sexo=="F"
+                        select l;
+            foreach (Alumno a in alumnas)
             {
-                if (a != null)
-                    if (a.sexo == "F")
-                        Console.WriteLine("{0} {1} {2} {3} {4}", a.nombre, a.primerapellido, a.segundoapeliido, a.ci, a.edad,a.sexo);
+                Console.WriteLine("{0} {1} {2} {3} {4}", a.nombre, a.primerapellido, a.segundoapellido, a.ci, a.edad, a.sexo);
+            }
+            Console.ReadKey();
+        }
+        public static void OrdenarNombre(Alumno[] listaalumnos)
+        {
+            var ordenarnombre = from l in listaalumnos
+                          orderby l.nombre
+                          select l;
+            foreach (Alumno a in ordenarnombre)
+            {
+                Console.WriteLine("{0} {1} {2} {3} {4}", a.nombre, a.primerapellido, a.segundoapellido, a.ci, a.edad, a.sexo);
+            }
+            Console.ReadKey();
+        }
+        public static void Mayores20(Alumno[] listaalumnos)
+        {
+            var mayores20 = from l in listaalumnos
+                            where l.edad >20
+                                select l;
+            foreach (Alumno a in mayores20)
+            {
+                Console.WriteLine("{0} {1} {2} {3} {4}", a.nombre, a.primerapellido, a.segundoapellido, a.ci, a.edad, a.sexo);
+            }
+            Console.ReadKey();
+        }
+        public static void SexoPrimerApellido(Alumno[] listaalumnos)
+        {
+            var SexoApellido = from l in listaalumnos
+                               orderby l.sexo, l.primerapellido descending
+                            select l;
+            foreach (Alumno a in SexoApellido)
+            {
+                Console.WriteLine("{0} {1} {2} {3} {4}", a.nombre, a.primerapellido, a.segundoapellido, a.ci, a.edad, a.sexo);
+            }
+            Console.ReadKey();
+        }
+        public static void AgruparEdad(Alumno[] listaalumnos)
+        {
+            var Edad = from l in listaalumnos
+                       orderby l.edad descending
+                               group l by l.edad into edad
+                               select edad;
+            foreach (var GrupoEdades in Edad)
+            {
+                Console.WriteLine(GrupoEdades.Key);
+                foreach (var alumno in GrupoEdades)
+                {
+                    
+                    Console.WriteLine("{0} {1} ", alumno.nombre,alumno.primerapellido);
+                }
+            }
+            Console.ReadKey();
+        }
+        public static void CantidadEdad(Alumno[] listaalumnos)
+        {
+            var cantidad = from l in listaalumnos
+                           group l by l.edad into edad
+                           select new { edad = edad.Key, Cantidad = edad.Count() };
+            foreach (var grupoedad in cantidad)
+            {
+
+                Console.WriteLine("{0} {1} ", grupoedad.edad, grupoedad.Cantidad);
+            }
+            Console.ReadKey();
+        }
+        public static void EdadPromedioSexo(Alumno[] listaalumnos)
+        {
+            var edad = from l in listaalumnos
+                       group l by l.sexo into sexo
+                       select new { sexo = sexo.Key, Promedio = sexo.Average(pe=>pe.edad) };
+            foreach (var grupoedad in edad)
+            {
+
+                Console.WriteLine("{0} {1} ", grupoedad.sexo, grupoedad.Promedio);
+            }
+            Console.ReadKey();
+        }
+        public static void MayorSexoEdad(Alumno[] listaalumnos)
+        {
+            var mayor = from l in listaalumnos
+                       group l by l.sexo into sexo
+                       select new { sexo = sexo.Key, Edad = sexo.Max(pe=>pe.edad) };
+            foreach (var grupoedad in mayor)
+            {
+
+                Console.WriteLine("{0} {1} ", grupoedad.sexo, grupoedad.Edad);
+            }
+            Console.ReadKey();
+        }
+        public static void TresMenores(Alumno[] listaalumnos)
+        {
+            var menores = (from l in listaalumnos
+                          orderby l.edad
+                          select l).Take(3);
+            foreach (Alumno a in menores)
+            {
+                Console.WriteLine("{0} {1} {2} {3} {4}", a.nombre, a.primerapellido, a.segundoapellido, a.ci, a.edad, a.sexo);
+            }
+            Console.ReadKey();
+        }
+        public static void TresMenoresDespues(Alumno[] listaalumnos)
+        {
+            var menores = (from l in listaalumnos
+                           orderby l.edad
+                           select l).Skip(3).Take(3);
+            foreach (Alumno a in menores)
+            {
+                Console.WriteLine("{0} {1} {2} {3} {4}", a.nombre, a.primerapellido, a.segundoapellido, a.ci, a.edad, a.sexo);
             }
             Console.ReadKey();
         }
 
-        static void mostrarordenados(Alumno[] listaalumnos)        
-        {
 
-            
-                
-            foreach (Alumno a in listaalumnos)
-            {
-                if (a != null)
-                {
-                    
-                    Console.WriteLine("{0} {1} {2} {3} {4}", a.nombre, a.primerapellido, a.segundoapeliido, a.ci, a.edad, a.sexo);
-
-                }
-            }
-            
-        }
     }
 }
+
