@@ -79,7 +79,7 @@ namespace Ejercicio_2
         public static void VotosDiputadosLapaz(Lista[] ListaDeMesas)
         {
             var cantidad = from l in ListaDeMesas
-                           group l by l.ciudad into ciudad
+                           group l by l.eleccion into ciudad
                            select new { Ciudad = ciudad.Key, Cantidad = ciudad.Count() };
 
             foreach (var a in cantidad)
@@ -90,7 +90,21 @@ namespace Ejercicio_2
             Console.ReadKey();
 
         }
+        public static void CrecerGano(Lista[] ListaDeMesas)
+        {
+            var gano = from l in ListaDeMesas
+                       group l by l.crecer into ganador
+                       select new { Ganador = ganador.Key, Cantidad = ganador.Max() };
 
-  
+
+            foreach (var a in gano)
+            {
+                Console.WriteLine("{0} ", a.Ganador);
+            }
+            Console.ReadKey();
+        }
+
+
+
     }
 }

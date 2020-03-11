@@ -11,7 +11,7 @@ namespace Ejercicio_1
         static void Main(string[] args)
         {
             // crear un arreglo de int, double y char
-            int[] intArray = { 2,3,4 };
+            int[] intArray = { 4,2,3 };
             double[] doubleArray = { 2.3, 3.1 ,4.6,};
             string[] stringArray = { "Juan", "Pedro", "Maria" };
 
