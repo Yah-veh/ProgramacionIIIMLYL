@@ -23,7 +23,7 @@ namespace Bicola
                 }
                 else
                 {
-                    frente--;
+                    frente++;
                 }
 
                 arreglo[frente] = valor;
