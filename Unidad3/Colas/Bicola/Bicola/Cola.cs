@@ -61,13 +61,32 @@ namespace Bicola
                     frente = 0;
             }
         }
-        public T Eliminar()
+        public T EliminarAdelante()
         {
-            if (!Vacia() == true)
-                Console.WriteLine("La cola esta vacia");
+            if (!Vacia())
+            {
+                frente++;
+                return arreglo[frente - 1];
+            }
             else
-                Console.WriteLine("Se eliminara el dato por el frente" + arreglo[frente]);
-            frente++;
+            {
+                Console.WriteLine("La Cola esta Vacia");
+                return arreglo[frente];
+            }
+
+        }
+        public T EliminarFinal()
+        {
+            if (!Vacia())
+            {
+                frente++;
+                return arreglo[final];
+            }
+            else
+            {
+                Console.WriteLine("La Cola esta Vacia");
+                return arreglo[final];
+            }
         }
         public void mostrar()
         {

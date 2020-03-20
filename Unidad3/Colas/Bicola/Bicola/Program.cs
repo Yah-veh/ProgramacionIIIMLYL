@@ -13,13 +13,15 @@ namespace Bicola
             int opcion = 0;
             int x = 0;
             Cola<int> p = new Cola<int>();
-            while (opcion != 4)
+            while (opcion != 6)
             {
                 Console.Clear();
-                Console.WriteLine("1. Insertar");
-                Console.WriteLine("2. Eliminar");
-                Console.WriteLine("3. Mostrar");
-                Console.WriteLine("4. Salir");
+                Console.WriteLine("1. Insertar Adelante");
+                Console.WriteLine("2. Insertar Final");
+                Console.WriteLine("3. Eliminar Adelante");
+                Console.WriteLine("4. Eliminar Final");
+                Console.WriteLine("5. Mostrar");
+                Console.WriteLine("6. Salir");
 
                 opcion = int.Parse(Console.ReadLine());
                 switch (opcion)
@@ -27,14 +29,24 @@ namespace Bicola
                     case 1:
                         Console.WriteLine("introduzca un elemento");
                         x = int.Parse(Console.ReadLine());
-                        p.Insertar(x);
+                        p.InsertarAdelante(x);
                         break;
                     case 2:
-                        x = p.Eliminar();
+                        Console.WriteLine("introduzca un elemento");
+                        x = int.Parse(Console.ReadLine());
+                        p.InsertarFinal(x);
+                        break;
+                    case 3:
+                        x = p.EliminarAdelante();
                         Console.WriteLine("El elemento eliminado es {0}", x);
                         Console.ReadKey();
                         break;
-                    case 3:
+                    case 4:
+                        x = p.EliminarFinal();
+                        Console.WriteLine("El elemento eliminado es {0}", x);
+                        Console.ReadKey();
+                        break;
+                    case 5:
                         p.mostrar();
                         Console.ReadKey();
                         break;
