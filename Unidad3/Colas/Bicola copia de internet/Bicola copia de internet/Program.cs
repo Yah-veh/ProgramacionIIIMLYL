@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections;
 
-namespace Practicando_con_Colas
+namespace Bicola_copia_de_internet
 {
-    class coladoble2
+    class Program
     {
         int opc;
         int[] cola = new int[max];
         int final = -1;
         int frente = -1;
-        public static int max = 5;
+        public static int max = 10;
         public void Menu()
         {
             Console.WriteLine(" opciones: ");
@@ -118,11 +117,12 @@ namespace Practicando_con_Colas
         }
         static void Main(string[] args)
         {
-            coladoble2 p = new coladoble2();
+            Program p = new Program();
             do
             {
                 p.Menu();
             } while (p.opc != 6);
         }
     }
+
 }
