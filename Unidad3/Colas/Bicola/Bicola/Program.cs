@@ -16,10 +16,10 @@ namespace Bicola
             while (opcion != 6)
             {
                 Console.Clear();
-                Console.WriteLine("1. Insertar Adelante");
-                Console.WriteLine("2. Insertar Final");
+                Console.WriteLine("1. Insertar Detras");
+                Console.WriteLine("2. Insertar Adelante");
                 Console.WriteLine("3. Eliminar Adelante");
-                Console.WriteLine("4. Eliminar Final");
+                Console.WriteLine("4. Eliminar Detras");
                 Console.WriteLine("5. Mostrar");
                 Console.WriteLine("6. Salir");
 
@@ -29,12 +29,12 @@ namespace Bicola
                     case 1:
                         Console.WriteLine("introduzca un elemento");
                         x = int.Parse(Console.ReadLine());
-                        p.InsertarAdelante(x);
+                        p.InsertarFinal(x);
                         break;
                     case 2:
                         Console.WriteLine("introduzca un elemento");
                         x = int.Parse(Console.ReadLine());
-                        p.InsertarFinal(x);
+                        p.InsertarAdelante(x);
                         break;
                     case 3:
                         x = p.EliminarAdelante();
