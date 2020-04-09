@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29403.142
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pila de Libros", "Pila de Libros\Pila de Libros.csproj", "{B39055D7-A874-47E5-A650-EFE8D89B00DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B39055D7-A874-47E5-A650-EFE8D89B00DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B39055D7-A874-47E5-A650-EFE8D89B00DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B39055D7-A874-47E5-A650-EFE8D89B00DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B39055D7-A874-47E5-A650-EFE8D89B00DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D2498C8-9DDB-4874-B30A-05B9C297E1B1}
+	EndGlobalSection
+EndGlobal
