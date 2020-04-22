@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29403.142
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lista Doble CO-VID 19", "Lista Doble CO-VID 19\Lista Doble CO-VID 19.csproj", "{BA1636A1-7245-4D00-B3A4-A63C90934D43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA1636A1-7245-4D00-B3A4-A63C90934D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1636A1-7245-4D00-B3A4-A63C90934D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA1636A1-7245-4D00-B3A4-A63C90934D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1636A1-7245-4D00-B3A4-A63C90934D43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4D64FBE-E987-47BA-AA6C-6E1C4B466271}
+	EndGlobalSection
+EndGlobal
