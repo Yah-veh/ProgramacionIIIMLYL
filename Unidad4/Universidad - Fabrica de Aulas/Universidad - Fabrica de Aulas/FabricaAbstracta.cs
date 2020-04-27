@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Universidad
+namespace Universidad___Fabrica_de_Aulas
 {
-    class Profesor:Persona
+    interface FabricaAbstracta
     {
-        private decimal Salario;
+        Aula getAula(string Tipo, List<Computadora> lista);
     }
 }

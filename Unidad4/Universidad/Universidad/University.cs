@@ -8,35 +8,40 @@ namespace Universidad
 {
     class University
     {
-        string Nombre;
-        int Nit;
-        TipoUniversidad tipoUniversidad;
-        string URL;
+        String nombre;
+        int nit;
+        TipoUniversidad tipouniversidad;
+        String URL;
         static University Instancia;
 
-        public void setDatos(string nombre, int nit, TipoUniversidad tipoUniversidad, string uRL)
+        private University()
         {
-            Nombre = nombre;
-            Nit = nit;
-            this.tipoUniversidad = tipoUniversidad;
+        }
+        public void setDatos(string nombre, int nit, TipoUniversidad tipouniversidad, string uRL)
+        {
+            this.nombre = nombre;
+            this.nit = nit;
+            this.tipouniversidad = tipouniversidad;
             URL = uRL;
+
         }
         public string getDatos()
         {
-            return "Nombre" + Nombre + "Nit" + Nit + "Tipo de Universidad" + tipoUniversidad + "URL" + URL;
+            return "Nombre: " + nombre + "nit:" + nit + "tipo:" + tipouniversidad.ToString() + "url:" + URL;
         }
         public static University getInstancia()
         {
             if (Instancia==null)
             {
                 Instancia = new University();
-            }
+            } 
             return Instancia;
+
         }
     }
     enum TipoUniversidad
     {
-        publica,
+        Publica,
         Privada
     }
 }

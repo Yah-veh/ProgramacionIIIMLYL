@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Universidad
 {
-    class Administrador
+    class Administrador : Person
     {
+        public override void PurchaceParkingTicket()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
