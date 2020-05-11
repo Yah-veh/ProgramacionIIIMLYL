@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B5454F6C-2CC4-48A3-A5F9-DB7DE0CF0908}</ProjectGuid>
+    <ProjectGuid>{7651D75A-4317-467F-A6FD-FDD744AE2CD3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Universidad___Fabrica_de_Aulas</RootNamespace>
-    <AssemblyName>Universidad - Fabrica de Aulas</AssemblyName>
+    <RootNamespace>Parqueo</RootNamespace>
+    <AssemblyName>Parqueo</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,21 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="aulas\Aula.cs" />
-    <Compile Include="Computadora\Computadora.cs" />
-    <Compile Include="Computadora\DiscoDuro.cs" />
-    <Compile Include="Fabricas\FabricaAbstracta.cs" />
-    <Compile Include="Fabricas\FabricaAulas.cs" />
-    <Compile Include="aulas\Laboratorio.cs" />
-    <Compile Include="Computadora\Procesador.cs" />
+    <Compile Include="Auto\Auto.cs" />
+    <Compile Include="Parqueo\Parqueo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="aulas\Tamanio.cs" />
-    <Compile Include="aulas\Teoria.cs" />
-    <Compile Include="aulas\Ubicacion.cs" />
+    <Compile Include="Parqueo\Puesto.cs" />
+    <Compile Include="Parqueo\Ubicacion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
