@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Java.Nio.Channels;
 
 namespace Parqueo_Movil___Xamarin
 {
@@ -20,10 +21,20 @@ namespace Parqueo_Movil___Xamarin
         int capacidad;
         private ProxyPuestos[] puestos;
 
-        public Parqueo(string nombre, Ubicacion ubicacion, double costo, int capacidad)
+        static Parqueo instancia;
+        public Parqueo getInstancia()
         {
-            this.nombre = nombre;
-            this.ubicacion = ubicacion;
+            if(instancia ==null)
+            {
+                instancia = new Parqueo();
+            }
+            return instancia;
+        }
+
+        private Parqueo()
+        {
+            this.nombre = "Paqueo Univalle";
+            
             this.costo = costo;
             this.capacidad = capacidad;
             this.puestos = new ProxyPuestos[capacidad];

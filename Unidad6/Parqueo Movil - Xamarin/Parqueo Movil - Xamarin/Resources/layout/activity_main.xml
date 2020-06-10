@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,17 +8,39 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <TextView
-        android:text="PARQUEO UNIVALLE"
+        android:text="Parqueo Univalle"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" 
+        android:id="@+id/txtTitulo" />
     <Button
-        android:text="iNGRESAR"
+        android:text="Ingreso de Vehiculo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toLeftOf="@id/textView1"
-        android:id="@+id/button1" />
+        android:id="@+id/btnIngresar"
+        android:layout_below="@id/txtTitulo"/>
+    <Button
+        android:text="Salida de Vehiculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSalida"
+        android:layout_below="@id/btnIngresar"/>
+    <Button
+        android:text="Mostrar Vehiculos Actuales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnActuales"
+        android:layout_below="@id/btnSalida"/>
+    <Button
+        android:text="Historial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnHistorial"
+        android:layout_below="@id/btnActuales"/>
+
+
+
 
 
 
