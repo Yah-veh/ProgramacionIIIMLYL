@@ -37,6 +37,10 @@ namespace Parqueo_Movil___Xamarin
                 string strTipo = seleccionadoTipo.Text;
                 Enum.TryParse(strTipo, out tipo);
 
+                
+
+                
+
                 int seleccionadoColorID = RadioGrupoTipoDeVehiculo.CheckedRadioButtonId;
                 RadioButton seleccionadoColor = FindViewById<RadioButton>(seleccionadoColorID);
                 Color color;
