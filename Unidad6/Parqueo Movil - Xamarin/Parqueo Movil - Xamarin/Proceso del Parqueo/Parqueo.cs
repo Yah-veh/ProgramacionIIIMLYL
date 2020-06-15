@@ -22,7 +22,7 @@ namespace Parqueo_Movil___Xamarin
         private ProxyPuestos[] puestos;
 
         static Parqueo instancia;
-        public Parqueo getInstancia()
+        public static Parqueo getInstancia()
         {
             if(instancia ==null)
             {
@@ -34,9 +34,9 @@ namespace Parqueo_Movil___Xamarin
         private Parqueo()
         {
             this.nombre = "Paqueo Univalle";
-            
-            this.costo = costo;
-            this.capacidad = capacidad;
+            this.ubicacion = new Ubicacion ("Las Vegas Nevada",9);
+            this.costo = 3;
+            this.capacidad = 10;
             this.puestos = new ProxyPuestos[capacidad];
             for (int i = 0; i < this.puestos.Count(); i++)
             {
@@ -100,23 +100,25 @@ namespace Parqueo_Movil___Xamarin
         }
 
 
-        public void getDatos()
+        public IPuesto[] getDatos()
         {
-            for (int i = 0; i < this.puestos.Count(); i++)
-            {
-                if (puestos[i].estaOcupado())
-                    Console.WriteLine("Puesto {0} Ocupado auto {1}", i, puestos[i].getAuto());
-                else
-                    Console.WriteLine("Puesto {0} Ocupado", i);
-            }
+            //for (int i = 0; i < this.puestos.Count(); i++)
+            //{
+            //    if (puestos[i].estaOcupado())
+            //        Console.WriteLine("Puesto {0} Ocupado auto {1}", i, puestos[i].getAuto());
+            //    else
+            //        Console.WriteLine("Puesto {0} Ocupado", i);
+            //}
+            return puestos;
         }
         public override string ToString()
         {
             return "Parqueo: " + nombre + " " + ubicacion;
         }
-        public void getHistorial(int indice)
+        public string[] getHistorial(int indice)
         {
-            puestos[indice].getHitorial();
+           return puestos[indice].getHitorial();
+
         }
     }
 

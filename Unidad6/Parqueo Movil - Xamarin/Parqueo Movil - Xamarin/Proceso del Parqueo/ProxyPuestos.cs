@@ -35,11 +35,10 @@ namespace Parqueo_Movil___Xamarin
             historial.Add(DateTime.Now.ToLongDateString() + " esta  saliendo el auto " + puesto.getAuto());
             return puesto.salirAuto();
         }
-        public void getHitorial()
+        public string[] getHitorial()
         {
             string[] h = historial.ToArray();
-            for (int i = 0; i < h.Count(); i++)
-                Console.WriteLine(h[i]);
+            return h;
         }
 
         public bool estaOcupado()

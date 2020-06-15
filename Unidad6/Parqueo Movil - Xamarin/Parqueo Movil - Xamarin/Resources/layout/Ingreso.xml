@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -17,29 +17,29 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/radioGroup1">
+        android:id="@+id/RadioGroupTipoDeVehiculo">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="Vagoneta"
-            android:id="@+id/radioButton1" />
+            android:id="@+id/radioVagoneta" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Camioneta"
-            android:id="@+id/radioButton2" />
+            android:id="@+id/radioCamioneta" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Auto"
-            android:id="@+id/radioButton3" />
+            android:id="@+id/radioAuto" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Motocicleta"
-            android:id="@+id/radioButton5" />
+            android:id="@+id/radioMotocicleta" />
     </RadioGroup>
     <TextView
         android:text="Color de Auto"
@@ -52,24 +52,24 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/radioGroup2">
+        android:id="@+id/RadioGroupColorDeVehiculo">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="Rojo"
-            android:id="@+id/radioButton4" />
+            android:id="@+id/radioRojo" />
       
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Negro"
-            android:id="@+id/radioButton6" />
+            android:id="@+id/radioNegro" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Blanco"
-            android:id="@+id/radioButton7" />
+            android:id="@+id/radioBlanco" />
     </RadioGroup>
     <TextView
         android:text="Marca"
@@ -82,23 +82,23 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/radioGroup3">
+        android:id="@+id/radioGroupMarcaDeVehiculo">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="Toyota"
-            android:id="@+id/radioButton8" />
+            android:id="@+id/radioToyota" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nissan"
-            android:id="@+id/radioButton9" />
+            android:id="@+id/radioNissan" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Suzuki"
-            android:id="@+id/radioButton10" />
+            android:id="@+id/radioSuzuki" />
     </RadioGroup>
     <TextView
         android:text="Número de Placa"
@@ -109,12 +109,12 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1" />
+        android:id="@+id/editTxtPlacaDeIngreso" />
     <Button
         android:text="Ingresar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1"
+        android:id="@+id/BtnDeIngreso"
         android:layout_marginRight="0.0dp" />
 
 

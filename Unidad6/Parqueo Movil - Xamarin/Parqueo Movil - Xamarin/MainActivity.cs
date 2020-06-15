@@ -3,6 +3,7 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
+using Android.Content;
 
 namespace Parqueo_Movil___Xamarin
 {
@@ -18,9 +19,32 @@ namespace Parqueo_Movil___Xamarin
 
             Button BotonIngresar = FindViewById<Button>(Resource.Id.btnIngresar);
             Button BotonSalida= FindViewById<Button>(Resource.Id.btnSalida);
-            Button BotonMostrarVehiculo = FindViewById<Button>(Resource.Id.btnActuales);
+            Button BotonMostrarVehiculoActuales = FindViewById<Button>(Resource.Id.btnActuales);
             Button BotonHistorial = FindViewById<Button>(Resource.Id.btnHistorial);
 
+            BotonIngresar.Click += (sender, e) =>
+            {
+                var ingresar = new Intent(this, typeof(ActividadIngresar));
+                StartActivity(ingresar);
+            };
+
+            BotonSalida.Click += (sender, e) =>
+            {
+                var salida = new Intent(this, typeof(ActividadSalida));
+                StartActivity(salida);
+            };
+
+            BotonMostrarVehiculoActuales.Click += (sender, e) =>
+            {
+                var VehiculosActuales = new Intent(this, typeof(ActividadMostrarVehiculosActuales));
+                StartActivity(VehiculosActuales);
+            };
+
+            BotonHistorial.Click += (sender, e) =>
+            {
+                var historial = new Intent(this, typeof(ActividadHistorial));
+                StartActivity(historial);
+            };
 
 
 
