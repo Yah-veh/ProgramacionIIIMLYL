@@ -31,7 +31,7 @@ namespace Listas
                         Console.WriteLine("que elemnto quiere eliminar");
                         x = int.Parse(Console.ReadLine());
                         l.Remove(x);
-                        Console.ReadKey();
+                        Console.ReadKey(); 
                         break;
                     case 3:
                         foreach (int o in l)
